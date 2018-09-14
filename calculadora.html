@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+    	var Op = 0;
+    	
+        
+    		
+    	function preencher(valor){
+    		document.getElementById("visor").value += valor;
+    	}
+    	function apagar(valor){
+    		document.getElementById("visor").value ='' ;
+    	}
+    	function operação(valor){
+    		var operacao = 0;
+    		document.getElementById("visor").value += valor; }
+
+    	function Calcular(){
+    		var resultado = 0;
+    		 resultado = document.getElementById("visor").value;
+    		 document.getElementById("visor").value = '';
+    		 document.getElementById("visor").value = eval(resultado);}
+
+    </script>
+  </head>
+  <body>
+      
+      <div class="container">
+      	<div class="page-header " style="width: 600px;">
+      		<input id="visor" type="text" class="form-control" style="height: 100px; width: 600px;" />
+      	</div>
+        
+        <div class="row">
+        	<button class="btn btn-info" style="width: 80px; margin:15px; "value="1" onclick="preencher(value)">1</button>
+        	<button class="btn btn-info" style="width: 80px; margin:15px;" value="2" onclick="preencher(value)">2</button>
+        	<button class="btn btn-info" style="width: 80px; margin:15px;" value="3" onclick="preencher(value)">3</button>
+        	<button class="btn btn-default" style="width: 80px; margin:15px;" value="+" onclick="operação(value)">+</button>
+        	<button class="btn btn-default" style="width: 80px; margin:15px;" value="-" onclick="operação(value)">-</button>
+        </div>
+        <div class="row">
+        	<button class="btn btn-info" style="width: 80px; margin:15px;" value="4" onclick="preencher(value)">4</button>
+        	<button class="btn btn-info" style="width: 80px; margin:15px;" value="5" onclick="preencher(value)">5</button>
+        	<button class="btn btn-info" style="width: 80px; margin:15px;" value="6" onclick="preencher(value)">6</button>
+        	<button class="btn btn-default" style="width: 80px; margin:15px;" value="*" onclick="operação(value)">*</button>
+        	<button class="btn btn-default" style="width: 80px; margin:15px;" value="/" onclick="operação(value)">/</button>
+        </div>
+        <div class="row">
+        	<button class="btn btn-info" style="width: 80px; margin:15px;" value="7" onclick="preencher(value)">7</button>
+        	<button class="btn btn-info" style="width: 80px; margin:15px;" value="8" onclick="preencher(value)">8</button>
+        	<button class="btn btn-info" style="width: 80px; margin:15px;" value="9" onclick="preencher(value)">9</button>
+        	<button class="btn btn-danger" style="width: 80px; margin:15px;" value="C" onclick="apagar(value)">C</button>
+        	<button class="btn btn-warning" style="width: 80px; margin:15px;" value="" onclick="Calcular();">=</button>
+        </div>
+        <div class="row">
+        	<button class="btn btn-info" style="width: 80px; margin-left:127px;" value="0" onclick="preencher(value)">0</button>
+        </div>
+
+      </div>
+     
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
